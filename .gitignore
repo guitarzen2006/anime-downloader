@@ -1,0 +1,8 @@
+# Ignore Environmental Variables
+.env
+env.sh
+.python-version
+.vscode
+
+# Ignore Trash
+*.old
