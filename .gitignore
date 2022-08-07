@@ -3,6 +3,7 @@
 env.sh
 .python-version
 .vscode
+__pycache__
 
 # Ignore Trash
 *.old
