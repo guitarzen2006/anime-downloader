@@ -7,3 +7,6 @@ __pycache__
 
 # Ignore Trash
 *.old
+
+# Symbolic Link for config_personal.py
+config_personal.py
