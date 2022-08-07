@@ -56,7 +56,6 @@ def main():
     #     entry.ep = episode_num
     # generate ep link, returns a entry
     entry = ep_class.gen_eplink()
-    print(entry)
 
     # Extracting Video URL Extracting the video and emebed url is done with the videourl class, it takes an entry
     # that has to at least have ep_url filled.
@@ -69,8 +68,6 @@ def main():
     dl_class = anipy_cli.download(entry, ffmpeg=True)
     # downloads a m3u8 or a mp4 link
     dl_class.download()
-
-    print(entry)
 
 if __name__ == "__main__":
     main()

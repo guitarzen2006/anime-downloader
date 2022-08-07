@@ -1,5 +1,7 @@
+from bcolors import bcolors
 import argparse
-import bcolors
+import sys
+
 
 def arguments():
     """
@@ -20,5 +22,6 @@ def arguments():
         pass
     else:
         print(f"{bcolors.FAIL}Missing episode number (-e | --episode_num) paramenter or choose latest episode with (-L | --Latest | --latest) argument.{bcolors.ENDC}")
+        sys.exit(1)
 
     return args
