@@ -1,4 +1,5 @@
-from ast import arguments
+#! /usr/bin/env python3
+
 import sys
 import arg_parser
 from bcolors import bcolors

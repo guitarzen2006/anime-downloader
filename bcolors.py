@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 """ 
 
 Add color for CLI output

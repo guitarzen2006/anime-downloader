@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 from bcolors import bcolors
 import argparse
 import sys
