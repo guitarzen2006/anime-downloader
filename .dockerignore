@@ -1,0 +1,12 @@
+# Ignore Environmental Variables
+.env
+env.sh
+.python-version
+.vscode
+__pycache__
+
+# Ignore Trash
+*.old
+
+# Symbolic Link for config_personal.py
+config_personal.py
