@@ -1,14 +1,17 @@
-FROM python:3.10-alpine3.15
+FROM python:3.10.6-buster
 
-COPY . /app
+COPY . .
 
 WORKDIR /app
 
-# Needed for Pillow, Numpy, and ffmpeg
-RUN apk add --update --no-cache tiff-dev jpeg-dev openjpeg-dev zlib-dev freetype-dev lcms2-dev \
-    libwebp-dev tcl-dev tk-dev harfbuzz-dev fribidi-dev libimagequant-dev \
-    libxcb-dev libpng-dev g++ ffmpeg
+# Needed ffmpeg clears apt cache after upgerade
+RUN apt-get update && apt-get install -y ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip; pip install -r requirements.txt --no-cache-dir
 
-CMD ["python main.py"]
+RUN mkdir -p ./anipy-cli_output/download
+
+RUN mv /app/config.py /usr/local/lib/python3.10/site-packages/anipy_cli/config.py
+
+ENTRYPOINT ["python", "main.py"]
