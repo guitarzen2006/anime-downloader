@@ -1,0 +1,2 @@
+anipy-cli==2.4.29
+ffmpeg==1.4
