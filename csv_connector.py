@@ -25,8 +25,7 @@ class Csv_connector:
             episode_db = csv.DictReader(f)
             episode_list = []
             for line in episode_db:
-                episode_list.append(line)
-                
+                episode_list.append(line)        
         return episode_list
 
     def search_date(self, date):
